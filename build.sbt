@@ -4,10 +4,10 @@ organization := "org.gwgs"
 
 version := "1.0"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.13.0"
 
 libraryDependencies ++= Seq(
-  "org.scalatest" %% "scalatest" % "2.1.6" % "test",
+  "org.scalatest" %% "scalatest" % "3.0.8" % "test",
   "junit" % "junit" % "4.11" % "test",
   "com.novocode" % "junit-interface" % "0.10" % "test"
 )
@@ -15,17 +15,6 @@ libraryDependencies ++= Seq(
 testOptions += Tests.Argument(TestFrameworks.JUnit, "-v")
 
 resolvers += Classpaths.sbtPluginReleases
-
-instrumentSettings
-
-ScoverageKeys.minimumCoverage := 70
-
-ScoverageKeys.failOnMinimumCoverage := false
-
-ScoverageKeys.highlighting := {
-  if (scalaBinaryVersion.value == "2.10") true
-  else true
-}
 
 publishArtifact in Test := false
 

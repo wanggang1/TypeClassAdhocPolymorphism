@@ -15,11 +15,11 @@ object Main {
     
     // we can also use the read function directly
     
-    println("20".read[Double]);
-    println("Using:A:Separator:to:split:a:String".read[List[Char]]);
-    println("Using:A:Separator:to:split:a:String".read[List[String]]);
+    println("20".readT[Double]);
+    println("Using:A:Separator:to:split:a:String".readT[List[Char]]);
+    println("Using:A:Separator:to:split:a:String".readT[List[String]]);
     println(Readable[Task].read("10|Title Text|Title Content"))
-    println("20|Another title Text|Another title Content".read[Task])
+    println("20|Another title Text|Another title Content".readT[Task])
     
   }
 
